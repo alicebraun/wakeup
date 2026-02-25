@@ -9,89 +9,95 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Wake Up.</tw-noscript></noscript></tw-story>
-<!-- UUID://D674C58C-DEFA-4F70-B7A2-27742230C950// --><tw-storydata name="Wake Up" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="D674C58C-DEFA-4F70-B7A2-27742230C950" zoom="1" format="Harlowe" format-version="3.3.9" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Init" tags="startup" position="100,100" size="100,100">(set: $hasFlashlight to false)
+<!-- UUID://D674C58C-DEFA-4F70-B7A2-27742230C950// --><tw-storydata name="Wake Up" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="D674C58C-DEFA-4F70-B7A2-27742230C950" zoom="1" format="Harlowe" format-version="3.3.9" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+body, tw-story, tw-passage {
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.1em;
+  line-height: 1.7;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Init" tags="startup" position="100,100" size="100,100">(set: $hasFlashlight to false)
 (set: $hasWand to false)
 (set: $hasGlasses to false)
 (set: $knowsCaveSecret to false)
 (set: $heardToad to false)
 (set: $hasToad to false)</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="225,100" size="100,100">You wake up in a dim room.
 
-(after: 2s)[(transition:&quot;dissolve&quot;)[Everything feels soft and blurry at the edges.]]
+(after: 1s)[(transition:&quot;dissolve&quot;)[Everything feels soft and blurry at the edges.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[...your bed, the ceiling, the pale rectangle of the window.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[...your bed, the ceiling, the pale rectangle of the window.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[You probably had a bad dream but you can&#39;t recall it.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[You probably had a bad dream but you can&#39;t recall it.]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[[[Stay a little longer...|Wake Up Call]]]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[[[Stay a little longer...|Wake Up Call]]]]
 
-(after: 10s)[(transition:&quot;dissolve&quot;)[[[Get up]]]]</tw-passagedata><tw-passagedata pid="3" name="Wake Up Call" tags="" position="350,100" size="100,100">You stare at the ceiling.
+(after: 5s)[(transition:&quot;dissolve&quot;)[[[Get up]]]]</tw-passagedata><tw-passagedata pid="3" name="Wake Up Call" tags="" position="350,100" size="100,100">You stare at the ceiling.
 
-(after: 2s)[(transition:&quot;dissolve&quot;)[You do remember that tomorrow is the last day of school.]]
+(after: 1s)[(transition:&quot;dissolve&quot;)[You do remember that tomorrow is the last day of school.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[All your friends seem to know exactly where they&#39;re going.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[All your friends seem to know exactly where they&#39;re going.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[You don&#39;t exactly have a plan but there&#39;s no way you&#39;re staying in this small town for much longer.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[You don&#39;t exactly have a plan but there&#39;s no way you&#39;re staying in this small town for much longer.]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[[[Get up]]]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[[[Get up]]]]
 
-(after: 10s)[(transition:&quot;dissolve&quot;)[[[Go back to sleep|Go Back To Sleep]]]]</tw-passagedata><tw-passagedata pid="4" name="Go Back To Sleep" tags="" position="475,100" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata><tw-passagedata pid="5" name="Get up" tags="" position="600,100" size="100,100">Your feet find the floor. The room is dim and blurry.
+(after: 5s)[(transition:&quot;dissolve&quot;)[[[Go back to sleep|Go Back To Sleep]]]]</tw-passagedata><tw-passagedata pid="4" name="Go Back To Sleep" tags="" position="475,100" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata><tw-passagedata pid="5" name="Get up" tags="" position="600,100" size="100,100">Your feet find the floor. The room is dim and blurry.
 
-(after: 2s)[(transition:&quot;dissolve&quot;)[[[Look out the window]]]]
+(after: 1s)[(transition:&quot;dissolve&quot;)[[[Look out the window]]]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[[[Find your glasses]]]]</tw-passagedata><tw-passagedata pid="6" name="Look out the window" tags="" position="725,100" size="100,100">(if: $hasGlasses is true)[
-(after: 2s)[(transition:&quot;dissolve&quot;)[The street is still and dark. Two cars are parked at the curb. A set of cypress trees are swaying slightly.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[[[Find your glasses]]]]</tw-passagedata><tw-passagedata pid="6" name="Look out the window" tags="" position="725,100" size="100,100">(if: $hasGlasses is true)[
+(after: 1s)[(transition:&quot;dissolve&quot;)[The street is still and dark. Two German cars are parked at the curb. A set of cypress trees are swaying slightly.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[You can hear some crickets chirping in the distance.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[You can hear some crickets chirping in the distance.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[Nothing is happening. Everything is exactly as it always has been.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[Nothing is happening. Everything is exactly as it always has been.]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[[[Go for a walk]]]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[[[Go for a walk]]]]
 ]
 (else:)[
-(after: 2s)[(transition:&quot;dissolve&quot;)[Outside is a smear of dark blue and grey. Trees, maybe. The street. It&#39;s hard to tell where one thing ends and another begins.]]
+(after: 1s)[(transition:&quot;dissolve&quot;)[Outside is a smear of dark blue and grey. Trees, maybe. The street. It&#39;s hard to tell where one thing ends and another begins.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[[[Find your glasses]]]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[[[Find your glasses]]]]
 ]</tw-passagedata><tw-passagedata pid="7" name="Find your glasses" tags="" position="850,100" size="100,100">(set: $hasGlasses to true)
 You feel along the nightstand until your fingers close around the familiar frames. You put them on.
 
-(after: 2s)[(transition:&quot;dissolve&quot;)[The room snaps into focus. Posters, clothes on the chair, and the stack of half-packed boxes in the corner.]]
+(after: 1s)[(transition:&quot;dissolve&quot;)[The room snaps into focus. Posters, clothes on the chair, and the stack of half-packed boxes in the corner.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[A documentary about submarines is playing on mute on your small tube television.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[A documentary about submarines is playing on mute on your small tube television.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[[[Look out the window]]]]</tw-passagedata><tw-passagedata pid="8" name="Go for a walk" tags="" position="975,100" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[You pull on your jacket, silently walk down the stairs and step outside.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[[[Look out the window]]]]</tw-passagedata><tw-passagedata pid="8" name="Go for a walk" tags="" position="975,100" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[You pull on your jacket, silently walk down the stairs and step outside.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[The air is crisp. Clean. But you notice that underneath it there&#39;s something else. A faint smell. You&#39;ve never noticed that before.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[The air is crisp. Clean. But you notice that underneath it there&#39;s something else. A faint smell. You&#39;ve never noticed that before.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[You stand in the street. The neighborhood is completely still.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[You stand in the street. The neighborhood is completely still.]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[
+(after: 4s)[(transition:&quot;dissolve&quot;)[
 [[Walk south toward the cave →|Cave]]
 [[Head east to the garage →|Garage]]
 [[Cut across to the neighbor&#39;s shack →|Neighbor&#39;s Shack]]
-]]</tw-passagedata><tw-passagedata pid="9" name="Garage" tags="" position="1100,100" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[The garage door is unlocked. It swings open with a sound like a held breath.]]
+]]</tw-passagedata><tw-passagedata pid="9" name="Garage" tags="" position="1100,100" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[The garage door is unlocked. It swings open with a sound like a held breath.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[Inside: Old paint cans, a broken lawnmower, your dad&#39;s tools hanging in their outlines on the pegboard.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[Inside: Old paint cans, a broken lawnmower, your dad&#39;s tools hanging in their outlines on the pegboard.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[On the workbench you spot a pocket flashlight.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[On the workbench you spot a pocket flashlight.]]
 
 (if: $hasFlashlight is false)[
-(after: 8s)[(transition:&quot;dissolve&quot;)[[[Pick up the flashlight →|Take Flashlight]]]]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[[[Pick up the flashlight →|Take Flashlight]]]]]
 (else:)[
-(after: 8s)[(transition:&quot;dissolve&quot;)[You already have the flashlight. Everything else seems useless for your journey.
+(after: 4s)[(transition:&quot;dissolve&quot;)[You already have the flashlight. Everything else seems useless for your journey.
 
 [[Head back outside →|Go for a walk]]]]]</tw-passagedata><tw-passagedata pid="10" name="Take Flashlight" tags="" position="1225,100" size="100,100">(set: $hasFlashlight to true)
 The flashlight is cold and solid in your hand. You click it on. A beam cuts through the dark.
 
-(after: 2s)[(transition:&quot;dissolve&quot;)[[[Head back outside →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="11" name="Take Wand" tags="" position="100,225" size="100,100">(set: $hasWand to true)
+(after: 1s)[(transition:&quot;dissolve&quot;)[[[Head back outside →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="11" name="Take Wand" tags="" position="100,225" size="100,100">(set: $hasWand to true)
 You pick it up. It&#39;s lighter than it looks. The warmth travels up your fingers, into your wrist. You pocket it without thinking too hard about it.
 
-(after: 2s)[(transition:&quot;dissolve&quot;)[[[Head back outside →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="12" name="Cave" tags="" position="225,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[You don&#39;t remember there being a cave here.]]
+(after: 1s)[(transition:&quot;dissolve&quot;)[[[Head back outside →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="12" name="Cave" tags="" position="225,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[You don&#39;t remember there being a cave here.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[And yet here it is: a low mouth in the hillside at the end of the street, half hidden behind the Petersons&#39; fence. Dark inside. The smell is stronger here.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[And yet here it is: a low mouth in the hillside at the end of the street, half hidden behind the Petersons&#39; fence. Dark inside. The smell is stronger here.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[Something drips somewhere in the dark. Slowly. Patiently.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[Something drips somewhere in the dark. Slowly. Patiently.]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[
+(after: 4s)[(transition:&quot;dissolve&quot;)[
 (if: $hasFlashlight is true and $knowsCaveSecret is true)[[[Shine your flashlight inside →|Cave Inside]]]
 (else: if: $hasFlashlight is true)[//You step inside but the passages twist and repeat. After a while you find yourself back at the entrance. You need to know the way.//
 
@@ -99,90 +105,90 @@ You pick it up. It&#39;s lighter than it looks. The warmth travels up your finge
 (else:)[//It&#39;s too dark to see anything. You&#39;d need a light.//
 
 [[Back to the street →|Go for a walk]]]
-]]</tw-passagedata><tw-passagedata pid="13" name="Neighbor&#39;s Shack" tags="" position="350,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[The path to the shack runs along the ditch. Tall grass on both sides, wet with dew.]]
+]]</tw-passagedata><tw-passagedata pid="13" name="Neighbor&#39;s Shack" tags="" position="350,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[The path to the shack runs along the ditch. Tall grass on both sides, wet with dew.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[Then you hear it. A toad, somewhere in the grass. A slow, rhythmic ribbiting that somehow sounds almost intentional. Like it&#39;s saying something in a language just beyond reach.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[Then you hear it. A toad, somewhere in the grass. A slow, rhythmic ribbiting that somehow sounds almost intentional. Like it&#39;s saying something in a language just beyond reach.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[The shack is dark. No lights on.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[The shack is dark. No lights on.]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[
+(after: 4s)[(transition:&quot;dissolve&quot;)[
 [[Listen to the toad →|Toad Song]]
 [[Knock on the shack door →|Shack Door]]
 [[Head back →|Go for a walk]]
-]]</tw-passagedata><tw-passagedata pid="14" name="Shack Door" tags="" position="475,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[The shack&#39;s door is unlocked and opens as you knock on it. It&#39;s a small town after all...]]
-
+]]</tw-passagedata><tw-passagedata pid="14" name="Shack Door" tags="" position="475,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[The shack&#39;s door is unlocked and opens as you knock on it. It&#39;s a small town after all...]]
 (if: $hasFlashlight is false)[
-(after: 4s)[(transition:&quot;dissolve&quot;)[//It&#39;s too dark to see anything inside.//]]
-(after: 6s)[(transition:&quot;dissolve&quot;)[[[Back to the street →|Go for a walk]]]]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[//It&#39;s too dark to see anything inside.//]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[[[Back to the street →|Go for a walk]]]]]
 
 (else:)[
-(after: 4s)[(transition:&quot;dissolve&quot;)[You sweep the flashlight around. Among some gardening tools you spot a thin wooden stick. It&#39;s smooth and slightly warm to the touch.]]
-(after: 6s)[(transition:&quot;dissolve&quot;)[It has a small crack running down one side that seems to glow, faintly, if you look at it from the corner of your eye.]]
-(after: 8s)[(transition:&quot;dissolve&quot;)[You&#39;re pretty sure that&#39;s an old back-scratcher.]]
-(after: 10s)[(transition:&quot;dissolve&quot;)[Probably...]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[You sweep the flashlight around. Among some gardening tools you spot a thin wooden stick. It&#39;s smooth and slightly warm to the touch.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[It has a small crack running down one side that seems to glow, faintly, if you look at it from the corner of your eye.]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[You&#39;re pretty sure that&#39;s an old back-scratcher.]]
+(after: 5s)[(transition:&quot;dissolve&quot;)[Probably...]]
 (if: $hasWand is false)[
-(after: 12s)[(transition:&quot;dissolve&quot;)[[[Pick up the stick →|Take Wand]]]]]
+(after: 6s)[(transition:&quot;dissolve&quot;)[[[Pick up the stick →|Take Wand]]]]]
 (else:)[
-(after: 12s)[(transition:&quot;dissolve&quot;)[You already picked up the wooden stick. Everything else seems useless for your journey.
+(after: 6s)[(transition:&quot;dissolve&quot;)[You already picked up the wooden stick. Everything else seems useless for your journey.
 [[Head back outside →|Go for a walk]]]]]
-]</tw-passagedata><tw-passagedata pid="15" name="Toad Song" tags="" position="600,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[You crouch down in the wet grass and listen.]]
+]</tw-passagedata><tw-passagedata pid="15" name="Toad Song" tags="" position="600,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[You crouch down in the wet grass and listen.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[At first it&#39;s just sound. Repetitive, ancient, amphibian.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[At first it&#39;s just sound. Repetitive, ancient, amphibian.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[But then... something shifts. Like tuning into a frequency. The ribbiting starts to resolve into something almost like syllables. Almost like your name.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[But then... something shifts. Like tuning into a frequency. The ribbiting starts to resolve into something almost like syllables. Almost like your name.]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[The grass around you begins to glow, very faintly. Pale green. Bioluminescent. Each blade lit from within.]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[The grass around you begins to glow, very faintly. Pale green. Bioluminescent. Each blade lit from within.]]
 
-(after: 10s)[(transition:&quot;dissolve&quot;)[You sit there for a long time. You feel....]]
+(after: 5s)[(transition:&quot;dissolve&quot;)[You sit there for a long time. You feel....]]
 
-(after: 12s)[(transition:&quot;dissolve&quot;)[weird.]]
+(after: 6s)[(transition:&quot;dissolve&quot;)[weird.]]
 
 (if: $hasWand is true)[
-(after: 14s)[(transition:&quot;dissolve&quot;)[[[Touch the toad with the wooden stick →|Touch Toad]]]]]
+(after: 7s)[(transition:&quot;dissolve&quot;)[[[Touch the toad with the wooden stick →|Touch Toad]]]]]
 (else:)[
-(after: 14s)[(transition:&quot;dissolve&quot;)[You have no idea what the toad wants to tell you. But you&#39;d really like to know.
+(after: 7s)[(transition:&quot;dissolve&quot;)[You have no idea what the toad wants to tell you. But you&#39;d really like to know.
 
-[[Stand up and continue →|Neighbor&#39;s Shack]]]]]</tw-passagedata><tw-passagedata pid="16" name="Touch Toad" tags="" position="725,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[You hesitate, then slowly reach out and touch the toad with the warm wooden stick.]]
+[[Stand up and continue →|Neighbor&#39;s Shack]]]]]</tw-passagedata><tw-passagedata pid="16" name="Touch Toad" tags="" position="725,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[You hesitate, then slowly reach out and touch the toad with the warm wooden stick.]]
 
-(after: 4s)[(transition:&quot;dissolve&quot;)[The glow surges. The ribbiting stops.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[The glow surges. The ribbiting stops.]]
 
-(after: 6s)[(transition:&quot;dissolve&quot;)[The toad looks at you with one enormous golden eye and says, very clearly:]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[The toad looks at you with one enormous golden eye and says, very clearly:]]
 
-(after: 8s)[(transition:&quot;dissolve&quot;)[//&quot;Left. Always left.&quot;//]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[//&quot;Left. Always left.&quot;//]]
 
-(after: 10s)[(transition:&quot;dissolve&quot;)[It keeps staring you in the eyes.]]
+(after: 5s)[(transition:&quot;dissolve&quot;)[It keeps staring you in the eyes.]]
 
-(after: 12s)[(transition:&quot;dissolve&quot;)[
+(after: 6s)[(transition:&quot;dissolve&quot;)[
 (set: $knowsCaveSecret to true)
 [[Stand up and head back →|Go for a walk]]
 [[Take the toad with you|Take Toad]]
-]]</tw-passagedata><tw-passagedata pid="17" name="Take Toad" tags="" position="850,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[You carefully lift the toad up with both your hands.]]
-(after: 4s)[(transition:&quot;dissolve&quot;)[It&#39;s kind of slippery but doesn&#39;t try to jump off. It stares you in the eyes, full of anticipation for your joint adventures.]]
-(after: 6s)[(transition:&quot;dissolve&quot;)[After all, why shouldn&#39;t you keep it?]]
-(after: 8s)[(transition:&quot;dissolve&quot;)[Might come in handy.]]
+]]</tw-passagedata><tw-passagedata pid="17" name="Take Toad" tags="" position="850,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[You carefully lift the toad up with both your hands.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[It&#39;s kind of slippery but doesn&#39;t try to jump off. It stares you in the eyes, full of anticipation for your joint adventures.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[After all, why shouldn&#39;t you keep it?]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[Might come in handy.]]
 (after: 9s)[(transition:&quot;dissolve&quot;)[
 &lt;pre&gt;
    ⊙ ⊙
  (_____)
  /|   |\
+
 &lt;/pre&gt;
 ]]
 (set: $hasToad to true)
-(after: 10s)[(transition:&quot;dissolve&quot;)[[[Stand up and head back →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="18" name="Cave Inside" tags="" position="975,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[You enter the dark cave.]]
-(after: 4s)[(transition:&quot;dissolve&quot;)[After your eyes have adjusted to the dim light, you can make out three paths.]]
-(after: 6s)[(transition:&quot;dissolve&quot;)[[[Head south →|Cave south]]]]
-(after: 8s)[(transition:&quot;dissolve&quot;)[[[Head west →|Cave west]]]]
-(after: 10s)[(transition:&quot;dissolve&quot;)[[[Head east →|Cave east]]]]
-(after: 12s)[(transition:&quot;dissolve&quot;)[[[Look at your hands →|Hands]]]]
-(after: 14s)[(transition:&quot;dissolve&quot;)[[[Back to the street →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="19" name="Hands" tags="" position="1100,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[You look down at your hands.]]
-(after: 4s)[(transition:&quot;dissolve&quot;)[You remember that on your left hand the thumb is on the right.]]
-(after: 6s)[(transition:&quot;dissolve&quot;)[You are not confused anymore. You remember what the toad told you.]]
-(after: 8s)[(transition:&quot;dissolve&quot;)[You should head east.]]
-(after: 10s)[(transition:&quot;dissolve&quot;)[Also, you really should remember to stop biting your nails.]]
-(after: 12s)[(transition:&quot;dissolve&quot;)[[[Back to the cave →|Cave Inside]]]]</tw-passagedata><tw-passagedata pid="20" name="Cave west" tags="" position="1225,225" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[To be continued...]]
-(after: 4s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata><tw-passagedata pid="21" name="Cave south" tags="" position="100,350" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[To be continued...]]
-(after: 4s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata><tw-passagedata pid="22" name="Cave east" tags="" position="225,350" size="100,100">(after: 2s)[(transition:&quot;dissolve&quot;)[To be continued...]]
-(after: 4s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata></tw-storydata>
+(after: 5s)[(transition:&quot;dissolve&quot;)[[[Stand up and head back →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="18" name="Cave Inside" tags="" position="975,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[You enter the dark cave.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[After your eyes have adjusted to the dim light, you can make out three paths.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[[[Head south →|Cave south]]]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[[[Head west →|Cave west]]]]
+(after: 5s)[(transition:&quot;dissolve&quot;)[[[Head east →|Cave east]]]]
+(after: 6s)[(transition:&quot;dissolve&quot;)[[[Look at your hands →|Hands]]]]
+(after: 7s)[(transition:&quot;dissolve&quot;)[[[Back to the street →|Go for a walk]]]]</tw-passagedata><tw-passagedata pid="19" name="Hands" tags="" position="1100,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[You look down at your hands.]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[You remember that on your left hand the thumb is on the right.]]
+(after: 3s)[(transition:&quot;dissolve&quot;)[You are not confused anymore. You remember what the toad told you.]]
+(after: 4s)[(transition:&quot;dissolve&quot;)[You should head east.]]
+(after: 5s)[(transition:&quot;dissolve&quot;)[Also, you really should remember to stop biting your nails.]]
+(after: 6s)[(transition:&quot;dissolve&quot;)[[[Back to the cave →|Cave Inside]]]]</tw-passagedata><tw-passagedata pid="20" name="Cave west" tags="" position="1225,225" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[To be continued...]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata><tw-passagedata pid="21" name="Cave south" tags="" position="100,350" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[To be continued...]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata><tw-passagedata pid="22" name="Cave east" tags="" position="225,350" size="100,100">(after: 1s)[(transition:&quot;dissolve&quot;)[To be continued...]]
+(after: 2s)[(transition:&quot;dissolve&quot;)[[[Wake up|Start]]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
