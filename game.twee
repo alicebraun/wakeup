@@ -1,0 +1,253 @@
+:: StoryTitle
+Wake Up
+
+:: StoryData
+{
+  "ifid": "D674C58C-DEFA-4F70-B7A2-27742230C950",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start"
+}
+
+:: Init [startup]
+(set: $hasFlashlight to false)
+(set: $hasWand to false)
+(set: $hasGlasses to false)
+(set: $knowsCaveSecret to false)
+(set: $heardToad to false)
+(set: $hasToad to false)
+
+
+:: Start
+You wake up in a dim room.
+
+(after: 2s)[(transition:"dissolve")[Everything feels soft and blurry at the edges.]]
+
+(after: 4s)[(transition:"dissolve")[...your bed, the ceiling, the pale rectangle of the window.]]
+
+(after: 6s)[(transition:"dissolve")[You probably had a bad dream but you can't recall it.]]
+
+(after: 8s)[(transition:"dissolve")[[[Stay a little longer...|Wake Up Call]]]]
+
+(after: 10s)[(transition:"dissolve")[[[Get up]]]]
+
+:: Wake Up Call
+You stare at the ceiling.
+
+(after: 2s)[(transition:"dissolve")[You do remember that tomorrow is the last day of school.]]
+
+(after: 4s)[(transition:"dissolve")[All your friends seem to know exactly where they're going.]]
+
+(after: 6s)[(transition:"dissolve")[You don't exactly have a plan but there's no way you're staying in this small town for much longer.]]
+
+(after: 8s)[(transition:"dissolve")[[[Get up]]]]
+
+(after: 10s)[(transition:"dissolve")[[[Go back to sleep|Go Back To Sleep]]]]
+
+:: Go Back To Sleep
+(after: 2s)[(transition:"dissolve")[[[Wake up|Start]]]]
+
+:: Get up
+Your feet find the floor. The room is dim and blurry.
+
+(after: 2s)[(transition:"dissolve")[[[Look out the window]]]]
+
+(after: 4s)[(transition:"dissolve")[[[Find your glasses]]]]
+
+:: Look out the window
+(if: $hasGlasses is true)[
+(after: 2s)[(transition:"dissolve")[The street is still and dark. Two cars are parked at the curb. A set of cypress trees are swaying slightly.]]
+
+(after: 4s)[(transition:"dissolve")[You can hear some crickets chirping in the distance.]]
+
+(after: 6s)[(transition:"dissolve")[Nothing is happening. Everything is exactly as it always has been.]]
+
+(after: 8s)[(transition:"dissolve")[[[Go for a walk]]]]
+]
+(else:)[
+(after: 2s)[(transition:"dissolve")[Outside is a smear of dark blue and grey. Trees, maybe. The street. It's hard to tell where one thing ends and another begins.]]
+
+(after: 4s)[(transition:"dissolve")[[[Find your glasses]]]]
+]
+
+:: Find your glasses
+(set: $hasGlasses to true)
+You feel along the nightstand until your fingers close around the familiar frames. You put them on.
+
+(after: 2s)[(transition:"dissolve")[The room snaps into focus. Posters, clothes on the chair, and the stack of half-packed boxes in the corner.]]
+
+(after: 4s)[(transition:"dissolve")[A documentary about submarines is playing on mute on your small tube television.]]
+
+(after: 6s)[(transition:"dissolve")[[[Look out the window]]]]
+
+:: Go for a walk
+(after: 2s)[(transition:"dissolve")[You pull on your jacket, silently walk down the stairs and step outside.]]
+
+(after: 4s)[(transition:"dissolve")[The air is crisp. Clean. But you notice that underneath it there's something else. A faint smell. You've never noticed that before.]]
+
+(after: 6s)[(transition:"dissolve")[You stand in the street. The neighborhood is completely still.]]
+
+(after: 8s)[(transition:"dissolve")[
+[[Walk south toward the cave →|Cave]]
+[[Head east to the garage →|Garage]]
+[[Cut across to the neighbor's shack →|Neighbor's Shack]]
+]]
+
+:: Garage
+(after: 2s)[(transition:"dissolve")[The garage door is unlocked. It swings open with a sound like a held breath.]]
+
+(after: 4s)[(transition:"dissolve")[Inside: Old paint cans, a broken lawnmower, your dad's tools hanging in their outlines on the pegboard.]]
+
+(after: 6s)[(transition:"dissolve")[On the workbench you spot a pocket flashlight.]]
+
+(if: $hasFlashlight is false)[
+(after: 8s)[(transition:"dissolve")[[[Pick up the flashlight →|Take Flashlight]]]]]
+(else:)[
+(after: 8s)[(transition:"dissolve")[You already have the flashlight. Everything else seems useless for your journey.
+
+[[Head back outside →|Go for a walk]]]]]
+
+:: Take Flashlight
+(set: $hasFlashlight to true)
+The flashlight is cold and solid in your hand. You click it on. A beam cuts through the dark.
+
+(after: 2s)[(transition:"dissolve")[[[Head back outside →|Go for a walk]]]]
+
+:: Take Wand
+(set: $hasWand to true)
+You pick it up. It's lighter than it looks. The warmth travels up your fingers, into your wrist. You pocket it without thinking too hard about it.
+
+(after: 2s)[(transition:"dissolve")[[[Head back outside →|Go for a walk]]]]
+
+:: Cave
+(after: 2s)[(transition:"dissolve")[You don't remember there being a cave here.]]
+
+(after: 4s)[(transition:"dissolve")[And yet here it is: a low mouth in the hillside at the end of the street, half hidden behind the Petersons' fence. Dark inside. The smell is stronger here.]]
+
+(after: 6s)[(transition:"dissolve")[Something drips somewhere in the dark. Slowly. Patiently.]]
+
+(after: 8s)[(transition:"dissolve")[
+(if: $hasFlashlight is true and $knowsCaveSecret is true)[[[Shine your flashlight inside →|Cave Inside]]]
+(else: if: $hasFlashlight is true)[//You step inside but the passages twist and repeat. After a while you find yourself back at the entrance. You need to know the way.//
+
+[[Back to the street →|Go for a walk]]]
+(else:)[//It's too dark to see anything. You'd need a light.//
+
+[[Back to the street →|Go for a walk]]]
+]]
+
+
+:: Neighbor's Shack
+(after: 2s)[(transition:"dissolve")[The path to the shack runs along the ditch. Tall grass on both sides, wet with dew.]]
+
+(after: 4s)[(transition:"dissolve")[Then you hear it. A toad, somewhere in the grass. A slow, rhythmic ribbiting that somehow sounds almost intentional. Like it's saying something in a language just beyond reach.]]
+
+(after: 6s)[(transition:"dissolve")[The shack is dark. No lights on.]]
+
+(after: 8s)[(transition:"dissolve")[
+[[Listen to the toad →|Toad Song]]
+[[Knock on the shack door →|Shack Door]]
+[[Head back →|Go for a walk]]
+]]
+
+:: Shack Door
+(after: 2s)[(transition:"dissolve")[The shack's door is unlocked and opens as you knock on it. It's a small town after all...]]
+
+(if: $hasFlashlight is false)[
+(after: 4s)[(transition:"dissolve")[//It's too dark to see anything inside.//]]
+(after: 6s)[(transition:"dissolve")[[[Back to the street →|Go for a walk]]]]]
+
+(else:)[
+(after: 4s)[(transition:"dissolve")[You sweep the flashlight around. Among some gardening tools you spot a thin wooden stick. It's smooth and slightly warm to the touch.]]
+(after: 6s)[(transition:"dissolve")[It has a small crack running down one side that seems to glow, faintly, if you look at it from the corner of your eye.]]
+(after: 8s)[(transition:"dissolve")[You're pretty sure that's an old back-scratcher.]]
+(after: 10s)[(transition:"dissolve")[Probably...]]
+(if: $hasWand is false)[
+(after: 12s)[(transition:"dissolve")[[[Pick up the stick →|Take Wand]]]]]
+(else:)[
+(after: 12s)[(transition:"dissolve")[You already picked up the wooden stick. Everything else seems useless for your journey.
+[[Head back outside →|Go for a walk]]]]]
+]
+
+:: Toad Song
+(after: 2s)[(transition:"dissolve")[You crouch down in the wet grass and listen.]]
+
+(after: 4s)[(transition:"dissolve")[At first it's just sound. Repetitive, ancient, amphibian.]]
+
+(after: 6s)[(transition:"dissolve")[But then... something shifts. Like tuning into a frequency. The ribbiting starts to resolve into something almost like syllables. Almost like your name.]]
+
+(after: 8s)[(transition:"dissolve")[The grass around you begins to glow, very faintly. Pale green. Bioluminescent. Each blade lit from within.]]
+
+(after: 10s)[(transition:"dissolve")[You sit there for a long time. You feel....]]
+
+(after: 12s)[(transition:"dissolve")[weird.]]
+
+(if: $hasWand is true)[
+(after: 14s)[(transition:"dissolve")[[[Touch the toad with the wooden stick →|Touch Toad]]]]]
+(else:)[
+(after: 14s)[(transition:"dissolve")[You have no idea what the toad wants to tell you. But you'd really like to know.
+
+[[Stand up and continue →|Neighbor's Shack]]]]]
+
+:: Touch Toad
+(after: 2s)[(transition:"dissolve")[You hesitate, then slowly reach out and touch the toad with the warm wooden stick.]]
+
+(after: 4s)[(transition:"dissolve")[The glow surges. The ribbiting stops.]]
+
+(after: 6s)[(transition:"dissolve")[The toad looks at you with one enormous golden eye and says, very clearly:]]
+
+(after: 8s)[(transition:"dissolve")[//"Left. Always left."//]]
+
+(after: 10s)[(transition:"dissolve")[It keeps staring you in the eyes.]]
+
+(after: 12s)[(transition:"dissolve")[
+(set: $knowsCaveSecret to true)
+[[Stand up and head back →|Go for a walk]]
+[[Take the toad with you|Take Toad]]
+]]
+
+:: Take Toad
+(after: 2s)[(transition:"dissolve")[You carefully lift the toad up with both your hands.]]
+(after: 4s)[(transition:"dissolve")[It's kind of slippery but doesn't try to jump off. It stares you in the eyes, full of anticipation for your joint adventures.]]
+(after: 6s)[(transition:"dissolve")[After all, why shouldn't you keep it?]]
+(after: 8s)[(transition:"dissolve")[Might come in handy.]]
+(after: 9s)[(transition:"dissolve")[
+<pre>
+   ⊙ ⊙
+ (_____)
+ /|   |\
+</pre>
+]]
+(set: $hasToad to true)
+(after: 10s)[(transition:"dissolve")[[[Stand up and head back →|Go for a walk]]]]
+
+
+:: Cave Inside
+(after: 2s)[(transition:"dissolve")[You enter the dark cave.]]
+(after: 4s)[(transition:"dissolve")[After your eyes have adjusted to the dim light, you can make out three paths.]]
+(after: 6s)[(transition:"dissolve")[[[Head south →|Cave south]]]]
+(after: 8s)[(transition:"dissolve")[[[Head west →|Cave west]]]]
+(after: 10s)[(transition:"dissolve")[[[Head east →|Cave east]]]]
+(after: 12s)[(transition:"dissolve")[[[Look at your hands →|Hands]]]]
+(after: 14s)[(transition:"dissolve")[[[Back to the street →|Go for a walk]]]]
+
+:: Hands
+(after: 2s)[(transition:"dissolve")[You look down at your hands.]]
+(after: 4s)[(transition:"dissolve")[You remember that on your left hand the thumb is on the right.]]
+(after: 6s)[(transition:"dissolve")[You are not confused anymore. You remember what the toad told you.]]
+(after: 8s)[(transition:"dissolve")[You should head east.]]
+(after: 10s)[(transition:"dissolve")[Also, you really should remember to stop biting your nails.]]
+(after: 12s)[(transition:"dissolve")[[[Back to the cave →|Cave Inside]]]]
+
+:: Cave west
+(after: 2s)[(transition:"dissolve")[To be continued...]]
+(after: 4s)[(transition:"dissolve")[[[Wake up|Start]]]]
+
+:: Cave south
+(after: 2s)[(transition:"dissolve")[To be continued...]]
+(after: 4s)[(transition:"dissolve")[[[Wake up|Start]]]]
+
+:: Cave east
+(after: 2s)[(transition:"dissolve")[To be continued...]]
+(after: 4s)[(transition:"dissolve")[[[Wake up|Start]]]]
+
