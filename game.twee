@@ -404,9 +404,9 @@ You pick it up. It's lighter than it looks. The warmth travels up your fingers, 
 
 (after: 4.5s)[(transition:"dissolve")[You still feel nervous about what's ahead of you.]]
 
-(after: 6s)[(transition:"dissolve")[After a while, you fetch your glasses and get out of bed. The sun is already up and you might be late for your last day of school.]]
+(after: 6s)[(transition:"dissolve")[After a while, you fetch your glasses and get out of bed. The sun is already up and you will be late for your last day of school.]]
 
-(after: 7.5s)[(transition:"dissolve")[[Wake up|Start]]]
+(after: 7.5s)[(transition:"dissolve")[[[Wake up |Start]]]]
 
 
 :: End2
