@@ -39,7 +39,6 @@ body, tw-story, tw-passage {
 }
 
 
-
 :: MyScript [script]
 function initStars() {
   var containers = document.querySelectorAll('.starfield');
@@ -81,11 +80,11 @@ You wake up in a dim room.
 
 (after: 4.5s)[(transition:"dissolve")[You probably had a bad dream but you can't recall it.]]
 
-(after: 6s)[(transition:"dissolve")[[[Stay a little longer...|Wake Up Call]]]]
+(after: 6s)[(transition:"dissolve")[[[Stay a little longer...|Wake Up]]]]
 
 (after: 7.5s)[(transition:"dissolve")[[[Get up]]]]
 
-:: Wake Up Call
+:: Wake Up
 You stare at the ceiling.
 
 (after: 1.5s)[(transition:"dissolve")[You do remember that tomorrow is the last day of school.]]
@@ -96,7 +95,7 @@ You stare at the ceiling.
 
 (after: 6s)[(transition:"dissolve")[[[Get up]]]]
 
-(after: 7.5s)[(transition:"dissolve")[[[Go back to sleep|Go Back To Sleep]]]]
+(after: 7.5s)[(transition:"dissolve")[[[Go back to sleep|End1]]]]
 
 :: Go Back To Sleep
 (after: 1.5s)[(transition:"dissolve")[[[Wake up|Start]]]]
@@ -393,7 +392,7 @@ You pick it up. It's lighter than it looks. The warmth travels up your fingers, 
 <span style="animation: twinkle 1.4s linear infinite; opacity:1;">.      *    .       *    .       *      .      *    .</span>
 <span style="animation: twinkle 2.8s linear infinite; opacity:1;">  *    .      *    .    *    .       *    .      *    .       *    .     </span>
 <span style="animation: twinkle 1.7s linear infinite; opacity:1;">.    *      .    *   .      *    .      .    *      .</span>
-<span style="animation: twinkle 2.2s linear infinite; opacity:1;">  *    .      *    .    *    .    *       .      *     .      *  *    .    *      </span>
+<span style="animation: twinkle 2.2s linear infinite; opacity:1;">  *    .      *    .    *    .    *       .      *     .      *  *    .    *  </span>
 <span style="animation: twinkle 3.5s linear infinite; opacity:1;">.      *    .       *    .    .      *    .    *    .   .      *    .   </span>
 <span style="animation: twinkle 1.1s linear infinite; opacity:1;">  .    *      .    *   .      *    .      *      .</span>
 <span style="animation: twinkle 2.3s linear infinite; opacity:1;">*    .      *    .  *   *    .      .    *      *    .    .      *    .  </span>
@@ -406,6 +405,8 @@ You pick it up. It's lighter than it looks. The warmth travels up your fingers, 
 (after: 4.5s)[(transition:"dissolve")[You still feel nervous about what's ahead of you.]]
 
 (after: 6s)[(transition:"dissolve")[After a while, you fetch your glasses and get out of bed. The sun is already up and you might be late for your last day of school.]]
+
+(after: 7.5s)[(transition:"dissolve")[[Turn back time→|Start]]]
 
 
 :: End2
